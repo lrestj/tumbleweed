@@ -1,0 +1,18 @@
+[window]
+dimensions = { columns = 90, lines = 30 }
+#position = { x = 240, y = 30 }
+padding = { x = 4, y = 8 }
+dynamic_padding = true
+opacity = 0.9
+
+[font]
+size=10.4
+
+[colors.primary]
+background = "#000f0f"
+#background = "#000000"
+
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/blood_moon.toml"
+]
