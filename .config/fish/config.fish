@@ -3,7 +3,7 @@ if status is-interactive
 
 abbr !! --position anywhere --function last_history_item
 #abbr gc 'cd ~/.dotfiles && git add . && git commit -m'
-abbr gc '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME commit -m'
+abbr gc '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME commit -a -m'
   abbr ga '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME add'
  # abbr ga 'cd ~/.dotfiles && git add .'
   abbr ghp '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME push -u origin main'
