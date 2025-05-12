@@ -2,11 +2,15 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 
 abbr !! --position anywhere --function last_history_item
-abbr gc 'cd ~/.dotfiles && git add . && git commit -m'
-  abbr ga 'cd ~/.dotfiles && git add .'
-  abbr ghp 'git push origin main'
+#abbr gc 'cd ~/.dotfiles && git add . && git commit -m'
+abbr gc '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME commit -m'
+  abbr ga '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME add'
+ # abbr ga 'cd ~/.dotfiles && git add .'
+  abbr ghp '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME push -u origin main'
   abbr gcl 'git clone git@github.com:lrestj/debian.git'
-  abbr gs 'cd ~/.dotfiles && git status'
+  abbr gs '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME status'
+
+ # abbr gs 'cd ~/.dotfiles && git status'
   abbr config '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
   abbr inst 'sudo apt install'
