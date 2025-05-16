@@ -8,7 +8,7 @@ abbr ghp '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push -u origi
 abbr gcl 'git clone git@github.com:lrestj/debian.git'
 abbr gs '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME status'
 
-abbr cfg '/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+abbr cfg '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME'
 
 abbr inst 'sudo apt install'
 abbr yay 'sudo apt update && sudo apt upgrade'
