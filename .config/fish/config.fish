@@ -4,8 +4,10 @@ if status is-interactive
 abbr !! --position anywhere --function last_history_item
 abbr gc --set-cursor '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME commit -a -m "%"'
 abbr ga '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME add'
-abbr ghp '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push -u origin main'
-abbr gcl 'git clone git@github.com:lrestj/debian.git'
+abbr ghp '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push -u github main'
+abbr cbp '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push codeberg main'
+abbr ppp '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push -u github main && /usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push codeberg main'
+abbr gcl 'git clone --bare https://codeberg.org/lrestj/nixos.gi;wt'
 abbr gs '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME status'
 
 abbr cfg '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME'
