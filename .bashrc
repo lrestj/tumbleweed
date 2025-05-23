@@ -17,7 +17,7 @@ alias yay='sudo apt update && sudo apt upgrade'
 alias rem='sudo apt remove'
 alias clean='sudo apt autoremove'
 alias reb='systemctl reboot'
-alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg.git'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 alias cfg='git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME'
 alias ga='git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME add'

@@ -17,7 +17,7 @@ abbr yay 'sudo apt update && sudo apt upgrade'
 abbr rem 'sudo apt remove'
 abbr clean 'sudo apt autoremove'
 abbr reb 'systemctl reboot'
-abbr update-grub 'sudo grub-mkconfig -o /boot/grub/grub.cfg.git'
+abbr update-grub 'sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 end
 
