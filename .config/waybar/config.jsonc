@@ -1,0 +1,190 @@
+// -*- mode: jsonc -*-
+
+// WAYBAR AT THE TOP
+
+[{
+    //"layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 31, // Waybar height (to be removed for auto height)
+    "margin-top": 1,
+    "margin-left": 8,
+    "margin-right": 8,
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/menu",
+        "hyprland/submap",
+        "cpu",
+        "temperature",
+        "memory",
+        "custom/media"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "mpd",
+        "pulseaudio",
+        "backlight",
+        "tray",
+        "clock",
+        "battery",
+        "power-profiles-daemon",
+        "hyprland/language",
+        "custom/power"
+    ],
+
+    "custom/menu": {
+        "format": "{}  👑 Menu  ",
+        "tooltip": false,
+        "on-click": "pkill rofi || rofi -show drun -show-icons",
+        "on-click-right": "wlogout"
+    },
+
+    "cpu": {
+        "format": "{usage}%   Skener + 🧮 ",
+        "tooltip": false,
+        "on-click": "pkill simple-scan || simple-scan",
+        "on-click-right": "pkill kalk || kalk",
+        "on-click-middle": "pkill btop || footclient -e btop"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon} 📝+Office",
+        "format-icons": ["", "", ""],
+        "on-click": "geany",
+        "on-click-right": "libreoffice",
+        "on-click-middle": "footclient -e vim"
+    },
+
+    "memory": {
+        "format": "{}%    Internet + 💾",
+        "on-click": "brave-browser",
+        "on-click-right": "pkill pcmanfm-qt || pcmanfm-qt",
+        "on-click-middle": "pkill yazi || footclient -e yazi"
+    },
+
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "on-click-right": "waybar --config ~/.config/waybar/config-taskbar"
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}   {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pkill pavucontrol || pavucontrol"
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "  {percent}% {icon} ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "on-click": "pkill footclient || footclient",
+        "on-click-right": "pkill btop || footclient --app-id btop -e btop"
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    "clock": {
+        "timezone": "Europe/Prague",
+        "locale": "cs_CZ.UTF-8",
+        "format": "{:%H:%M 🕘}",
+        "tooltip-format": "<big>{:L%e L%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:L%A %d.%m.%Y}"
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "min-length" : 4,
+        "format-cs": "🇨🇿",
+        "format-en": "🇺🇸",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+    },
+
+    "custom/power": {
+        "format" : "⏻ ",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        "menu-actions": {
+            "vypnout": "poweroff",
+            "restart": "reboot",
+            "uspat": "systemctl suspend",
+            "odhlásit": "hyprctl dispatch exit"
+        }
+    }
+}, 
+
+
+// TASK BAR AT THE RIGHT
+
+{
+    "layer": "top", // Waybar at top layer
+    "position": "right", 
+    //"height": 30,
+    // "width": 1280,
+    "spacing": 4,
+    // Choose the order of the modules
+    "modules-center": ["wlr/taskbar"],
+    // Modules configuration
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 26,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-right": "close"
+    }
+}]

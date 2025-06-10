@@ -151,8 +151,8 @@
     <keybind key="F12">
       <action name="Execute" command="foot"/>
     </keybind>
-    <keybind key="C-S-e">
-      <action name="Execute" command="foot -e vim"/>
+    <keybind key="C-S-n">
+      <action name="Execute" command="foot -e nvim"/>
     </keybind>
     <keybind key="W-y">
       <action name="Execute" command="lxqt-runner" />
