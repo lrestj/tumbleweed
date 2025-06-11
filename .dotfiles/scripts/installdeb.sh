@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-Apps = " hyprland nfs-common waybar gvfs-backends network-manager-applet udiskie swaybg wlsunset breeze brightnessctl pamixer geany wofi wlogout cliphist wl-clipboard mako hyprland-protocols hyprwayland-scanner grim slurp swayidle swaylock libglib2.0-bin lxqt-policykit pcmanfm-qt libfuse2 libnotify-bin"
+Apps = " hyprland nfs-common waybar power-profiles-daemon gvfs-backends network-manager-applet udiskie swaybg wlsunset breeze brightnessctl pamixer geany wofi wlogout cliphist wl-clipboard mako hyprland-protocols hyprwayland-scanner grim slurp swayidle swaylock libglib2.0-bin lxqt-policykit pcmanfm-qt libfuse2 libnotify-bin"
 
 
 sudo apt update && sudo apt upgrade
