@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-Apps = " hyprland waybar gvfs-backends network-manager-applet udiskie swaybg wlsunset breeze brightnessctl pamixer geany wofi wlogout cliphist wl-clipboard mako hyprland-protocols hyprwayland-scanner grim slurp swayidle swaylock libglib2.0-bin lxqt-policykit pcmanfm-qt libfuse2 libnotify-bin"
+Apps = " hyprland nfs-common waybar gvfs-backends network-manager-applet udiskie swaybg wlsunset breeze brightnessctl pamixer geany wofi wlogout cliphist wl-clipboard mako hyprland-protocols hyprwayland-scanner grim slurp swayidle swaylock libglib2.0-bin lxqt-policykit pcmanfm-qt libfuse2 libnotify-bin"
 
 
 sudo apt update && sudo apt upgrade
@@ -66,12 +66,12 @@ echo -e "\n"
 echo "-------------------------------------------------------------------------"
  s
 
-# git@github.com:lrestj/endos.git
-# ssh://git@codeberg.org/lrestj/endos.git
+# git@github.com:lrestj/debian.git
+# ssh://git@codeberg.org/lrestj/debian.git
 
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote remove origin
-git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add github git@github.com:lrestj/endos.git
-git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add codeberg ssh://git@codeberg.org/lrestj/endos.git
+git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add github git@github.com:lrestj/debian.git
+git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add codeberg ssh://git@codeberg.org/lrestj/debian.git
 git config --global user.email "rest@seznam.cz"
 git config --global user.name "LrestJ"
 
