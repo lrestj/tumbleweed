@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-Apps = "breeze brightnessctl cliphist geany grim gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako network-manager-applet nfs-common nwg-look pamixer pcmanfm-qt power-profiles-daemon slurp swaybg swayidle swaylock udiskie waybar wl-clipboard wlogout wlsunset wofi xournalp xwayland"
+Apps = "ark breeze brightnessctl cliphist geany grim gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako network-manager-applet nfs-common nwg-look pamixer pcmanfm-qt power-profiles-daemon slurp swaybg swayidle swaylock udiskie waybar wl-clipboard wlogout wlsunset wofi xournalp xwayland"
 
 
 sudo apt update && sudo apt upgrade

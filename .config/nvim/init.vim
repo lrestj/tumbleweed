@@ -89,13 +89,13 @@
    call plug#end()
 
 
-        " Transparent background
+        "Transparent background
         high Normal guibg=none
         high NonText guibg=none
         high LineNr guibg=none
          
 
-     " Toggle background transparency
+     "Toggle background transparency
      let t:isTransparent = 0
      function! BGToggleTransparency()
        if t:isTransparent == 0
