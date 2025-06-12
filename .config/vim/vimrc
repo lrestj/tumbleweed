@@ -1,6 +1,6 @@
 """"" VIM CONFIGURATION """""
 "
-    "source ~/.config/vim/plugin/startify.vim
+    "source ~/.config/vim/plugin/startiy.vim
     "source ~/.config/vim/plugin/fzf.vim
 
     "My remaps
@@ -9,6 +9,7 @@
     nnoremap : ;
     nnoremap <BS> X
     nnoremap Y y$
+    map <C-c> "+y
     nnoremap <leader>q ZQ
     nnoremap <leader><leader> :set relativenumber!<CR>
     nnoremap <leader>, :set nohlsearch<CR>
@@ -72,7 +73,7 @@
     set showmatch mat=2
     set showtabline=1
     set spelllang=cs,en
-     set softtabstop=4 shiftwidth=4 expandtab
+    " set softtabstop=4 shiftwidth=4 expandtab
     set wildcharm=<Tab>
     set wildmenu
     set wildoptions=pum,tagfile
@@ -80,7 +81,7 @@
     "Statusline
      hi StatusLine ctermbg=0 ctermfg=92
      set statusline=%n\ %f\ %m\ \ \ %v\ \ %l/%L%<%h%w%r\ \ \ %y
-     set statusline+=%=reg\ {%{v:register}}\ \ \  
+     set statusline+=%=reg\ {%{v:register}}\ \ 
     " set statusline=%f\ \%<\ %h%w%m%r%=%-14.(%l,%c%V%)\ %P    "default vim
 
    "Plugins
@@ -88,7 +89,8 @@
      " List your plugins here
      Plug 'tpope/vim-commentary'
      Plug 'mhinz/vim-startify'
-     Plug 'utubo/vim-registers-lite'
+     " Plug 'utubo/vim-registers-lite'
+     Plug 'junegunn/vim-peekaboo'
      Plug 'LnL7/vim-nix'
      Plug 'chriszarate/yazi.vim'
      Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
