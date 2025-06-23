@@ -35,3 +35,4 @@ alias config='git --git-dir=/home/libor/.cfg/ --work-tree=/home/libor'
 
  
 #####  END OF FILE  #####
+. "$HOME/.cargo/env"
