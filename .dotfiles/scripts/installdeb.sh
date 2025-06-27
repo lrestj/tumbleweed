@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-Apps="ark breeze brightnessctl cliphist fastfetch figlet fish fonts-noto fonts-font-awesome foot geany grim gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer pcmanfm-qt power-profiles-daemon qt6ct slurp swaybg swayidle swaylock udiskie waybar wl-clipboard wlogout wlsunset wofi xournalpp xwayland"
+Apps="ark breeze brightnessctl cliphist fastfetch figlet fish fonts-noto fonts-font-awesome foot geany grim gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq kcalc libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer pcmanfm-qt power-profiles-daemon qt6ct slurp swaybg swayidle swaylock udiskie waybar wl-clipboard wlogout wlsunset wofi xournalpp xwayland"
 
 
 sudo apt update && sudo apt upgrade
