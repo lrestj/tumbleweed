@@ -43,7 +43,7 @@ cfg push
 💬 Set up your alias before starting. Just type it in your terminal or add it to your .bashrc, config.fish.
 
 ```
-alias cfg='git --git-dir=$HOME/.cfg-git/ --work-tree=$HOME'
+alias cfg='git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME'
 ```
 
 💬 Add your git bare repository to a .gitignore file. This will help you avoid any recursion problems.
