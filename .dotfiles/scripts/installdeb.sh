@@ -1,8 +1,8 @@
-##### Debian Hyprland install #####
-
 #!/bin/bash
 
-Apps="ark breeze brightnessctl cliphist fastfetch figlet fish fonts-noto fonts-font-awesome foot geany grim gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq kcalc libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer pcmanfm-qt power-profiles-daemon qt6ct slurp swaybg swayidle swaylock udiskie waybar wl-clipboard wlogout wlsunset wofi xournalpp xwayland"
+##### Debian Hyprland install #####
+
+Apps="ark breeze brightnessctl cliphist fastfetch figlet fish fonts-noto fonts-font-awesome foot geany grim gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq kcalc libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer pcmanfm-qt power-profiles-daemon qt6ct slurp swaybg swayidle swaylock udiskie vainfo waybar wl-clipboard wlogout wlsunset wofi xournalpp xwayland"
 
 
 sudo apt update && sudo apt upgrade
@@ -11,10 +11,8 @@ sudo apt install $Apps &&
 echo "Instalace dokončena"
 sleep 3
 echo "Kopíruji konfiguraci z repozitáře"
-#alias cfg='git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME' &&
 echo ".cfg.git" >> .gitignore
 git clone --bare https://codeberg.org/lrestj/debian.git $HOME/.cfg.git &&
-#alias cfg='git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME' &&
 git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME checkout -f
 git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME config --local status.showUntrackedFiles no
 echo "Konfigurace z repozitáře kompletní"
@@ -25,33 +23,19 @@ echo -e "\n"
 echo "Synology nfs shares"
 echo -e "\n"
 
+#NFS mounts:
 sudo systemctl enable --now nfs-client.target
-
 sudo systemctl enable --now NetworkManager-wait-online.service
-
-
-#Ověřit:
-
 showmount -e 192.168.77.18
 
-
-
-#mounts
-
-
 sudo mkdir -p /data/nfs/FilmyNas /data/nfs/HudbaNas /data/nfs/Nas &&
-
 sudo chmod -R ugo+rwx /data/nfs
-
 sudo mount -t nfs 192.168.77.18:/volume1/Rodinas /data/nfs/Nas
-
 sudo mount -t nfs 192.168.77.18:/volume1/Hudba /data/nfs/HudbaNas
-
 sudo mount -t nfs 192.168.77.18:/volume1/Filmy /data/nfs/FilmyNas
 
 #add to fstab:
 sudo cp /etc/fstab /etc/fstab.bak
-
 cd ~/.dotfiles/scripts/
 cat 3fstabnfs | sudo tee -a /etc/fstab
 echo -e "\n"
@@ -77,7 +61,7 @@ git config --global user.name "LrestJ"
 
 echo "Codeberg and Github remote repos added"
 echo -e "\n"
-echo "END OF INSTALLATION" 
+echo "Instalace kompletní" 
 
 
 ##### END OF FILE #####
