@@ -55,7 +55,7 @@
     "temperature": {
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon} 📝+Office",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", "", ""],
         "on-click": "geany",
         "on-click-right": "libreoffice",
         "on-click-middle": "footclient -e vim"
@@ -64,7 +64,7 @@
     "memory": {
         "format": "{}%    Internet + 💾",
         "on-click": "brave-browser",
-        "on-click-right": "pkill pcmanfm-qt || pcmanfm-qt",
+        "on-click-right": "pkill thunar || thunar",
         "on-click-middle": "pkill yazi || footclient -e yazi"
     },
 
