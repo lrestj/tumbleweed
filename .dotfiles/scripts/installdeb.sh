@@ -2,7 +2,7 @@
 
 ##### Debian Hyprland install #####
 
-Apps="ark breeze brightnessctl btop cliphist eog evince fastfetch figlet fish fonts-noto fonts-font-awesome foot geany gnome-disk-utility grim gthumb gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq kcalc libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer power-profiles-daemon qt6ct slurp swaybg swayidle swaylock thunar thunar-archive-plugin udiskie vainfo waybar wl-clipboard wlogout wlsunset wofi xournalpp xwayland"
+Apps="ark breeze brightnessctl btop cliphist eog evince fastfetch figlet fish fonts-noto fonts-font-awesome foot geany gnome-calculator gnome-disk-utility grim gthumb gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer power-profiles-daemon qt6ct slurp swaybg swayidle swaylock thunar thunar-archive-plugin udiskie vainfo waybar wl-clipboard wlogout wlsunset wofi xournalpp xwayland"
 
 
 sudo apt update && sudo apt upgrade
@@ -12,7 +12,9 @@ echo "Instalace dokončena"
 sleep 3
 echo "Kopíruji konfiguraci z repozitáře"
 echo ".cfg.git" >> .gitignore
-git clone --bare https://codeberg.org/lrestj/debian.git $HOME/.cfg.git &&
+git clone --bare https://github.com/lrestj/debian.git /home/libor/.cfg.git
+# git clone --bare https://gitlab.com/lrestj/debian.git &&
+
 git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME checkout -f
 git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME config --local status.showUntrackedFiles no
 echo "Konfigurace z repozitáře kompletní"
@@ -55,6 +57,7 @@ echo "-------------------------------------------------------------------------"
 
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote remove origin
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add github git@github.com:lrestj/debian.git
+git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add gitlab git@gitlab.com:lrestj/debian.git
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add codeberg ssh://git@codeberg.org/lrestj/debian.git
 git config --global user.email "rest@seznam.cz"
 git config --global user.name "LrestJ"

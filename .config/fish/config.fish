@@ -6,7 +6,7 @@ abbr gc --set-cursor '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME c
 abbr ga '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME add'
 abbr ghp '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push -u github main'
 abbr cbp '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push codeberg main'
-abbr ppp '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push -u github main && /usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push codeberg main'
+abbr ppp '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push -u github main && /usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push codeberg main && /usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME push gitlab main'
 abbr gcl 'git clone --bare https://codeberg.org/lrestj/nixos.gi;wt'
 abbr gs '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME status'
 
