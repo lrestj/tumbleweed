@@ -4,13 +4,21 @@
 #sudo apt install nfs-common
 
 sudo systemctl enable --now nfs-client.target
-
 sudo systemctl enable --now NetworkManager-wait-online.service
+# If it is not working:
+# sudo systemctl disable NetworkManager-wait-online.service
+# sudo systemctl enable --now systemd-networkd-wait-online.service
+# sudo systemctl edit systemd-networkd-wait-online.service
+# Add between commented place:
+#  [Service] 
+#  ExecStart= 
+#  ExecStart=/usr/lib/systemd/systemd-networkd-wait-online
+#  TimeoutSec=10
 
 
 #Ověřit:
 
-showmount -e 192.168.77.18
+sudo showmount -e 192.168.77.18
 
 
 
