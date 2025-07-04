@@ -56,3 +56,4 @@
 ".local/share/keyrings/V\303\275choz\303\255_kl\303\255\304\215enka.keyring"
 .local/share/keyrings/default
 .sudo_as_admin_successful
+.local/share/gvfs-metadata/
