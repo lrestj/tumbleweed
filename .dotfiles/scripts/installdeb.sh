@@ -2,7 +2,7 @@
 
 ##### Debian Hyprland install #####
 
-Apps="apt-listbugs ark breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd-find figlet fish font-manager fonts-noto fonts-font-awesome foot geany gnome-calculator gnome-disk-utility grim gthumb gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer power-profiles-daemon pulseaudio pulseaudio-module-gsettings pulseaudio-module-jack qt6ct sddm slurp swaybg swayidle swaylock thunar thunar-archive-plugin udiskie vainfo waybar wl-clipboard wlogout wlsunset wofi xournalpp xwayland"
+Apps="apt-listbugs ark breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd-find figlet fish font-manager fonts-noto fonts-font-awesome foot geany gnome-calculator gnome-disk-utility grim gthumb gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer pavucontrol power-profiles-daemon pipewire pipewire-audio-client-libraries pulseaudio pulseaudio-module-gsettings pulseaudio-module-jack qt6ct sddm sddm-theme-elarun slurp swaybg swayidle swaylock thunar thunar-archive-plugin udiskie vainfo waybar wl-clipboard wireplumber wlogout wlsunset wofi xournalpp xwayland"
 
 
 sudo apt update && sudo apt upgrade
@@ -16,7 +16,7 @@ git clone --bare https://github.com/lrestj/debian.git /home/libor/.cfg.git
 # git clone --bare https://gitlab.com/lrestj/debian.git &&
 
 git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME checkout -f
-git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME config --local status.showUntrackedFiles no
+# git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME config --local status.showUntrackedFiles no
 echo "Konfigurace z repozitáře kompletní"
 echo -e "\n"
 echo "Nastavení swap"

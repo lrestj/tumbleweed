@@ -23,6 +23,9 @@
 .local/share/user-places.xbel.bak
 .local/share/user-places.xbel.tbcache
 .local/state/yazi/.dds
+.config/lxqt/
+.local/share/keyrings/
+.local/share/kwalletd/
 .pki/nssdb/cert9.db
 .pki/nssdb/key4.db
 .pki/nssdb/pkcs11.txt
