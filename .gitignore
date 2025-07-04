@@ -45,3 +45,12 @@
 .gtkrc-2.0
 .lesshst
 .local/share/Trash/
+.config/font-manager/Sources.xml
+.config/fontconfig/conf.d/09-Directories.conf
+.config/systemd/user/default.target.wants/pipewire.service
+.config/systemd/user/pipewire.service.wants/wireplumber.service
+.config/systemd/user/sockets.target.wants/pipewire.socket
+.local/share/gvfs-metadata/home-471e0909.log
+".local/share/keyrings/V\303\275choz\303\255_kl\303\255\304\215enka.keyring"
+.local/share/keyrings/default
+.sudo_as_admin_successful
