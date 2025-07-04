@@ -2,7 +2,7 @@
 
 ##### Debian Hyprland install #####
 
-Apps="apt-listbugs ark breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd-find figlet fish font-manager fonts-noto fonts-font-awesome foot geany gnome-calculator gnome-disk-utility grim gthumb gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer pavucontrol power-profiles-daemon pipewire pipewire-audio-client-libraries pulseaudio pulseaudio-module-gsettings pulseaudio-module-jack qt6ct sddm sddm-theme-elarun slurp swaybg swayidle swaylock thunar thunar-archive-plugin udiskie vainfo waybar wl-clipboard wireplumber wlogout wlsunset wofi xournalpp xwayland"
+Apps="apt-listbugs ark autofs breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd-find figlet fish font-manager fonts-noto fonts-font-awesome foot geany gnome-calculator gnome-disk-utility grim gthumb gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq libfuse2 libglib2.0-bin libnotify-bin lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer pavucontrol power-profiles-daemon pipewire pipewire-audio-client-libraries pulseaudio pulseaudio-module-gsettings pulseaudio-module-jack qt6ct sddm sddm-theme-elarun slurp swaybg swayidle swaylock thunar thunar-archive-plugin udiskie vainfo waybar wl-clipboard wireplumber wlogout wlsunset wofi xournalpp xwayland"
 
 
 sudo apt update && sudo apt upgrade
@@ -22,35 +22,34 @@ echo -e "\n"
 echo "Nastavení swap"
 echo vm.swappiness=10 | sudo tee /etc/sysctl.d/99-swappiness.conf
 echo -e "\n"
-echo "Synology nfs shares"
-echo -e "\n"
+# echo "Synology nfs shares"
+# echo -e "\n"
 
 #NFS mounts:
-sudo systemctl enable --now nfs-client.target
-sudo systemctl enable --now NetworkManager-wait-online.service
-showmount -e 192.168.77.18
+#sudo systemctl enable --now nfs-client.target
+#sudo systemctl enable --now NetworkManager-wait-online.service
+#showmount -e 192.168.77.18
 
-sudo mkdir -p /data/nfs/FilmyNas /data/nfs/HudbaNas /data/nfs/Nas &&
-sudo chmod -R ugo+rwx /data/nfs
-sudo mount -t nfs 192.168.77.18:/volume1/Rodinas /data/nfs/Nas
-sudo mount -t nfs 192.168.77.18:/volume1/Hudba /data/nfs/HudbaNas
-sudo mount -t nfs 192.168.77.18:/volume1/Filmy /data/nfs/FilmyNas
+#sudo mkdir -p /data/nfs/FilmyNas /data/nfs/HudbaNas /data/nfs/Nas &&
+#sudo chmod -R ugo+rwx /data/nfs
+#sudo mount -t nfs 192.168.77.18:/volume1/Rodinas /data/nfs/Nas
+#sudo mount -t nfs 192.168.77.18:/volume1/Hudba /data/nfs/HudbaNas
+#sudo mount -t nfs 192.168.77.18:/volume1/Filmy /data/nfs/FilmyNas
 
-#add to fstab:
-sudo cp /etc/fstab /etc/fstab.bak
-cd ~/.dotfiles/scripts/
-cat 3fstabnfs | sudo tee -a /etc/fstab
-echo -e "\n"
+##add to fstab:
+#sudo cp /etc/fstab /etc/fstab.bak
+#cd ~/.dotfiles/scripts/
+#cat 3fstabnfs | sudo tee -a /etc/fstab
+#echo -e "\n"
 
-echo "Připojení Nas Synology proběhlo úspěšně"
-echo "Soubor fstab nyní vypadá takto:"
-echo "-------------------------------------------------------------------------"
-echo -e "\n"
-cat /etc/fstab
+#echo "Připojení Nas Synology proběhlo úspěšně"
+#echo "Soubor fstab nyní vypadá takto:"
+#echo "-------------------------------------------------------------------------"
+#echo -e "\n"
+#cat /etc/fstab
 
-echo -e "\n"
-echo "-------------------------------------------------------------------------"
- s
+#echo -e "\n"
+#echo "-------------------------------------------------------------------------"
 
 # git@github.com:lrestj/debian.git
 # ssh://git@codeberg.org/lrestj/debian.git
