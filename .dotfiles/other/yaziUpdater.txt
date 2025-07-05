@@ -1,0 +1,11 @@
+Yazi updater
+
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+
+cd /home/libor/.cache/yazi
+
+git pull
+
+cargo build --release --locked
