@@ -2,7 +2,7 @@
 
 ##### Debian Hyprland install #####
 
-Apps="apt-listbugs ark autofs baobab breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd-find figlet firewalld firewall-config firewall-applet fish font-manager fonts-noto fonts-font-awesome foot geany gnome-calculator gnome-disk-utility grim gthumb gvfs-backends hyprland hyprland-protocols hyprwayland-scanner jq libgl1-mesa-dev libfuse2 libglib2.0-bin libnotify-bin libreoffice-gtk3 libreoffice-l10n-cs lxqt-policykit mako-notifier network-manager-applet nfs-common nwg-look pamixer pavucontrol power-profiles-daemon pipewire-audio pipewire-jack qt6ct sddm sddm-theme-elarun slurp swaybg swayidle swaylock thunar thunar-archive-plugin udiskie vainfo waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xournalpp xwayland"
+Apps="apt-listbugs ark autofs baobab breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd figlet firewalld firewall-config firewall-applet fish font-manager fonts-noto fonts-font-awesome foot geany gnome-calculator gnome-disk-utility google-noto-fonts grim gthumb gvfs-backends hyprland hyprland-protocols hyprland-qt-support hyprwayland-scanner jq libgl1-mesa-dev libfuse2 libglib2.0-bin libnotify-bin libreoffice-gtk3 libreoffice-l10n-cs lxqt-policykit mako NetworkManager NetworkManager-applet nfs-common nwg-look opi pamixer pavucontrol power-profiles-daemon pipewire-audio pipewire-jack qt6ct  slurp swaybg swayidle swaylock symbols-only-nerd-fonts thunar thunar-archive-plugin udiskie vainfo waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xournalpp xwayland yazi"
 
 
 sudo apt update && sudo apt upgrade
@@ -12,7 +12,7 @@ echo "Instalace dokončena"
 sleep 3
 echo "Kopíruji konfiguraci z repozitáře"
 echo ".cfg.git" >> .gitignore
-git clone --bare https://github.com/lrestj/debian.git /home/libor/.cfg.git
+git clone --bare https://github.com/lrestj/tumbleweed.git /home/libor/.cfg.git
 # git clone --bare https://gitlab.com/lrestj/debian.git &&
 
 git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME checkout -f
@@ -26,13 +26,15 @@ echo "Nfs shares and other config"
 echo -e "\n"
 
 # NFS mounts and grub and sddm conf:
-sudo cp -rf /home/libor/.dotfiles/other/to-etc/auto.master auto.nfs sddm.conf.d/ /etc/
+sudo cp -rf /home/libor/.dotfiles/other/to-etc/auto.master /etc/
+sudo cp -rf /home/libor/.dotfiles/other/to-etc/auto.nfs /etc/
+sudo cp -rf /home/libor/.dotfiles/other/to-etc/sddm.conf.d /etc/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd/sleep.conf.d /etc/systemd/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/grub.d/40_custom /etc/grub.d/
+sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd-system/getty@tty1.service.d/* /etc/systemd/system/ 
 
-# git@github.com:lrestj/debian.git
-# git@gitlab.com:lrestj/debian.git
-# ssh://git@codeberg.org/lrestj/debian.git
+# git@github.com:lrestj/tumbleweed.git
+# git@gitlab.com:lrestj/tumbleweed.git
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote remove origin
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add github git@github.com:lrestj/debian.git
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add gitlab git@gitlab.com:lrestj/debian.git
