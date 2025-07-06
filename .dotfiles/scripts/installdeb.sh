@@ -2,17 +2,16 @@
 
 ##### Debian Hyprland install #####
 
-Apps="apt-listbugs ark autofs baobab breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd figlet firewalld firewall-config firewall-applet fish font-manager fonts-noto fonts-font-awesome foot geany gnome-calculator gnome-disk-utility google-noto-fonts grim gthumb gvfs-backends hyprland hyprland-protocols hyprland-qt-support hyprwayland-scanner jq libgl1-mesa-dev libfuse2 libglib2.0-bin libnotify-bin libreoffice-gtk3 libreoffice-l10n-cs lxqt-policykit mako NetworkManager NetworkManager-applet nfs-common nwg-look opi pamixer pavucontrol power-profiles-daemon pipewire-audio pipewire-jack qt6ct  slurp swaybg swayidle swaylock symbols-only-nerd-fonts thunar thunar-archive-plugin udiskie vainfo waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xournalpp xwayland yazi"
+Apps="autofs baobab breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd figlet firewalld firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator gnome-disk-utility google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends hyprland hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jq Mesa-libGL1 libfuse2 libnotify libreoffice-gtk3 libreoffice-l10n-cs lxqt-policykit mako NetworkManager NetworkManager-applet nfs-utils nwg-look opi pamixer pavucontrol power-profiles-daemon pipewire pipewire-jack qt6ct slurp swaybg swayidle swaylock symbols-only-nerd-fonts thunar thunar-archive-plugin udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-dirs-dirs xournalpp xwayland yazi"
 
 
-sudo apt update && sudo apt upgrade
 echo "Instalace balíčků..."
-sudo apt install $Apps &&
+sudo zypper install --no-recommends $Apps &&
 echo "Instalace dokončena"
 sleep 3
 echo "Kopíruji konfiguraci z repozitáře"
 echo ".cfg.git" >> .gitignore
-git clone --bare https://github.com/lrestj/tumbleweed.git /home/libor/.cfg.git
+git clone --bare https://github.com/lrestj/opensuse.git /home/libor/.cfg.git
 # git clone --bare https://gitlab.com/lrestj/debian.git &&
 
 git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME checkout -f
@@ -36,9 +35,8 @@ sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd-system/getty@tty1.service
 # git@github.com:lrestj/tumbleweed.git
 # git@gitlab.com:lrestj/tumbleweed.git
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote remove origin
-git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add github git@github.com:lrestj/debian.git
-git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add gitlab git@gitlab.com:lrestj/debian.git
-git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add codeberg ssh://git@codeberg.org/lrestj/debian.git
+git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add github git@github.com:lrestj/opensuse.git
+git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add gitlab git@gitlab.com:lrestj/opensuse.git
 git config --global user.email "rest@seznam.cz"
 git config --global user.name "LrestJ"
 
