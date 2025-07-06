@@ -58,3 +58,8 @@
 .sudo_as_admin_successful
 .local/share/gvfs-metadata/
 .local/state/wireplumber/
+.emacs
+.gnupg/
+.inputrc
+.local/share/hyprland/
+.local/state/btop.log
