@@ -2,7 +2,7 @@
 
 ##### Debian Hyprland install #####
 
-Apps="autofs baobab breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd figlet firewalld firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator gnome-disk-utility google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends hyprland hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jq Mesa-libGL1 libfuse2 libnotify libreoffice-gtk3 libreoffice-l10n-cs lxqt-policykit mako NetworkManager NetworkManager-applet nfs-utils nwg-look opi pamixer pavucontrol power-profiles-daemon pipewire pipewire-jack qt6ct slurp swaybg swayidle swaylock symbols-only-nerd-fonts thunar thunar-archive-plugin udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-dirs-dirs xournalpp xwayland yazi"
+Apps="autofs baobab breeze brightnessctl btop cliphist cmake curl eog evince fastfetch fd figlet firewalld firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator gnome-disk-utility google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends hyprland hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jq Mesa-libGL1 libfuse2 libnotify libreoffice-gtk3 libreoffice-l10n-cs lxqt-policykit mako NetworkManager NetworkManager-applet nfs-utils nwg-look opi pamixer pavucontrol power-profiles-daemon pipewire pipewire-jack qt6ct slurp swaybg swayidle swaylock symbols-only-nerd-fonts thunar thunar-archive-plugin udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-user-dirs xournalpp xwayland yazi"
 
 
 echo "Instalace balíčků..."
