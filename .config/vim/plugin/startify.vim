@@ -23,7 +23,7 @@
 
    let g:startify_bookmarks = [
            \ { 'd':'~/.dotfiles'},
-           \ { 'm': '~/.config/vim' },
+           \ { 'm': '~/.config/hypr' },
            \ ]
 
    let g:startify_commands = [
