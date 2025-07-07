@@ -12,7 +12,7 @@ abbr gs '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME status'
 
 abbr cfg '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME'
 
-abbr inst 'sudo zypper install'
+abbr in 'sudo zypper install'
 abbr yay 'sudo zypper dup'
 abbr rem 'sudo zypper remove --clean-deps'
 abbr clean 'bash /home/libor/.dotfiles/scripts/cleanzypper.sh'
