@@ -45,6 +45,7 @@
     noremap <leader>x :bd<CR>
     nnoremap <leader><Tab> :buffer<Space><Tab>
     noremap <leader>v :vnew<CR>
+    noremap <leader>V :new<CR>
 
     "Numbered list macro
     noremap <leader>c I0gvg
