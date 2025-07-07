@@ -40,8 +40,10 @@ git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add gitlab gi
 git config --global user.email "rest@seznam.cz"
 git config --global user.name "LrestJ"
 
+sudo systemctl restart autofs.service
 sudo systemctl restart cups.service
 sudo systemctl enable avahi-daemon.service
+mkdir Veřejné Videa Stažené Šablony Hudba
 
 echo "Remote repos added"
 echo -e "\n"
