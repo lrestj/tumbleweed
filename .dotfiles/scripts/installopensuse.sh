@@ -30,7 +30,7 @@ sudo cp -rf /home/libor/.dotfiles/other/to-etc/auto.nfs /etc/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/sddm.conf.d /etc/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd/sleep.conf.d /etc/systemd/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/grub.d/40_custom /etc/grub.d/
-sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd-system/getty@tty1.service.d/* /etc/systemd/system/ 
+sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd/system/getty@tty1.service.d/ /etc/systemd/system/ 
 
 # git@github.com:lrestj/tumbleweed.git
 # git@gitlab.com:lrestj/tumbleweed.git

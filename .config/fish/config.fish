@@ -14,10 +14,10 @@ abbr cfg '/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME'
 
 abbr inst 'sudo zypper install'
 abbr yay 'sudo zypper dup'
-abbr rem 'sudo zypper remove'
+abbr rem 'sudo zypper remove --clean-deps'
 abbr clean 'bash /home/libor/.dotfiles/scripts/cleanzypper.sh'
 abbr reb 'systemctl reboot'
-abbr update-grub 'sudo grub-mkconfig -o /boot/grub/grub.cfg'
+abbr update-grub 'sudo grub2-mkconfig -o /boot/grub2/grub.cfg'
 
 end
 
