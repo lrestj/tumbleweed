@@ -77,3 +77,6 @@ Public/
 .config/libreoffice/4/user/pack/config/javasettings_Linux_X86_64.pack
 .config/libreoffice/4/user/store/
 .wget-hsts
+.config/go/
+go/
+.config/clipse/clipse.log
