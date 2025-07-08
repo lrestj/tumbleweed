@@ -9,6 +9,7 @@ echo "Instalace balíčků..."
 sudo zypper install --no-recommends $Apps &&
 echo "Instalace dokončena"
 sleep 3
+opi brave &&	
 echo "Kopíruji konfiguraci z repozitáře"
 echo ".cfg.git" >> .gitignore
 git clone --bare https://github.com/lrestj/opensuse.git /home/libor/.cfg.git
