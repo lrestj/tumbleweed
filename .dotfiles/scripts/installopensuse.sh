@@ -2,7 +2,7 @@
 
 ##### Debian Hyprland install #####
 
-Apps="autofs avahi baobab breeze brightnessctl btop cliphist cmake cups curl eog evince fastfetch fd figlet firewalld firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator gnome-disk-utility google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends hplip hyprland hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jq Mesa-libGL1 libfuse2 libnotify libreoffice-gtk3 libreoffice-l10n-cs lxqt-policykit mako NetworkManager NetworkManager-applet nfs-utils nwg-look opi pamixer pavucontrol power-profiles-daemon pipewire pipewire-jack libqt5-qtwayland qt6ct rofi simple-scan slurp swaybg swayidle swaylock symbols-only-nerd-fonts thunar thunar-archive-plugin udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-user-dirs xournalpp xwayland yazi"
+Apps="autofs avahi baobab kf6-breeze-icons breeze6-cursors brightnessctl btop cliphist cmake cups eog evince fastfetch fd figlet firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator gnome-disk-utility google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends hplip hyprland hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jq Mesa-libGL1 libnotify-devel libreoffice libreoffice-gtk3 libreoffice-l10n-cs lxqt-policykit mako nemo nemo-extension-fileroller nemo-extension-lang NetworkManager-applet nfs-client nwg-look opi pamixer pavucontrol pcmanfm-qt-lang power-profiles-daemon pipewire pipewire-jack libqt5-qtwayland qt6ct rofi simple-scan slurp swaybg swayidle swaylock symbols-only-nerd-fonts udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-user-dirs xournalpp xwayland yazi"
 
 
 echo "Instalace balíčků..."
@@ -32,6 +32,7 @@ sudo cp -rf /home/libor/.dotfiles/other/to-etc/sddm.conf.d /etc/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd/sleep.conf.d /etc/systemd/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/grub.d/40_custom /etc/grub.d/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd/system/getty@tty1.service.d/ /etc/systemd/system/ 
+gsettings set org.cinnamon.desktop.default-applications.terminal exec footclient
 
 # git@github.com:lrestj/tumbleweed.git
 # git@gitlab.com:lrestj/tumbleweed.git
