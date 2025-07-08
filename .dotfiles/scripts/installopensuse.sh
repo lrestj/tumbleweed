@@ -46,7 +46,7 @@ sudo cp /home/libor/.dotfiles/fonts/cybermedium.flf /usr/share/figlet/
 sudo systemctl enable autofs.service
 sudo systemctl enable cups.service
 sudo systemctl enable avahi-daemon.service
-mkdir Public Videa Stažené Temp Hudba
+mkdir Public Videa Stažené Temp Hudba Obrázky
 
 echo "Remote repos added"
 echo -e "\n"
