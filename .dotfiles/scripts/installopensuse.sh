@@ -41,10 +41,10 @@ git config --global user.email "rest@seznam.cz"
 git config --global user.name "LrestJ"
 
 sudo cp /home/libor/.dotfiles/fonts/cybermedium.flf /usr/share/figlet/
-sudo systemctl restart autofs.service
-sudo systemctl restart cups.service
+sudo systemctl enable autofs.service
+sudo systemctl enable cups.service
 sudo systemctl enable avahi-daemon.service
-mkdir Veřejné Videa Stažené Šablony Hudba
+mkdir Public Videa Stažené Temp Hudba
 
 echo "Remote repos added"
 echo -e "\n"

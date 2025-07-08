@@ -51,15 +51,15 @@
     noremap <leader>c I0gvg
     
     "Optional settings
+    set nocompatible
     set background=dark   
     colorscheme wildcharm
     syntax on
     filetype plugin indent on
-    set nocompatible
     set autoread
     set backspace=indent,eol,start
     set cul
-    set directory=~/Veřejné//
+    set directory=~/Public/
     set hidden
     set ignorecase smartcase
     set incsearch
