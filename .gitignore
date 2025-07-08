@@ -63,3 +63,8 @@
 .inputrc
 .local/share/hyprland/
 .local/state/btop.log
+.config/geany/session.conf
+Temp/
+.local/state/lesshst
+.viminfo.tmp
+.viminfz.tmp
