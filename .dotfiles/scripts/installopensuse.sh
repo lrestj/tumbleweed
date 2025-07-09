@@ -1,6 +1,6 @@
 #!/bin/bash
 
-##### Debian Hyprland install #####
+##### Tumbleweed Hyprland install #####
 
 Apps="autofs avahi baobab kf6-breeze-icons breeze6-cursors brightnessctl btop cliphist cmake cups eog evince fastfetch fd figlet firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator gnome-disk-utility google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends gvim hplip hyprland hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jq Mesa-libGL1 libnotify-devel libreoffice libreoffice-gtk3 libreoffice-l10n-cs lxqt-policykit mako nemo nemo-extension-fileroller nemo-extension-lang nemo-extension-terminal NetworkManager-applet nfs-client nwg-look opi pamixer pavucontrol pcmanfm-qt-lang power-profiles-daemon pipewire pipewire-jack libqt5-qtwayland qt6ct rofi simple-scan slurp swaybg swayidle swaylock symbols-only-nerd-fonts udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-user-dirs xournalpp xwayland yazi"
 
@@ -25,17 +25,17 @@ echo -e "\n"
 tput setaf 166 bold; echo "✅ Nfs a aktivace služeb..."
 echo -e "\n"
 
-# NFS mounts and grub and sddm conf:
+# NFS, services, configs:
 sudo mkdir -p /data/nfs/ /data/nfs/ /data/nfs/ &&
 sudo chmod -R ugo+rwx /data/nfs
 
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/auto.master /etc/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/auto.nfs /etc/
-sudo cp -rf /home/libor/.dotfiles/other/to-etc/sddm.conf.d /etc/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd/sleep.conf.d /etc/systemd/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/grub.d/40_custom /etc/grub.d/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd/system/getty@tty1.service.d/ /etc/systemd/system/ 
 gsettings set org.cinnamon.desktop.default-applications.terminal exec footclient
+sudo cp /home/libor/.dotfiles/fonts/cybermedium.flf /usr/share/figlet/
 
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote remove origin
 git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add github git@github.com:lrestj/opensuse.git
@@ -43,7 +43,6 @@ git --git-dir=/home/libor/.cfg.git/ --work-tree=/home/libor remote add gitlab gi
 git config --global user.email "rest@seznam.cz"
 git config --global user.name "LrestJ"
 
-sudo cp /home/libor/.dotfiles/fonts/cybermedium.flf /usr/share/figlet/
 sudo systemctl enable autofs.service
 sudo systemctl enable cups.service
 sudo systemctl enable avahi-daemon.service
