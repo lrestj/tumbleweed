@@ -47,6 +47,7 @@ sudo systemctl enable cups.service
 sudo systemctl enable avahi-daemon.service
 sudo systemctl disable NetworkManager-wait-online.service
 sudo usermod -aG wheel libor
+sudo cp -r /home/libor/.dotfiles/other/to-etc/systemd/system/getty@tty1.service.d /etc/systemd/system/
 mkdir Public Videa Stažené Temp Hudba Obrázky
 
 bash /home/libor/.dotfiles/scripts/clipse.sh
