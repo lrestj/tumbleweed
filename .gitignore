@@ -80,3 +80,5 @@ Public/
 .config/go/
 go/
 .config/clipse/clipse.log
+.local/bin/
+.local/src/
