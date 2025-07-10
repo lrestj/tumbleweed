@@ -4,9 +4,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+
 # Autologin Hyprland from tty
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-    Hyprland >/dev/null
+if [ "$(tty)" = "/dev/tty1" ];then
+  exec Hyprland
 fi
 
 # BASH PROMPT LOOK	
