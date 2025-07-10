@@ -8,7 +8,7 @@ Apps="autofs avahi baobab kf6-breeze-icons breeze6-cursors brightnessctl btop cl
 tput setaf 166 bold; echo "✅ Instalace balíčků..."
 sudo zypper install --no-recommends $Apps &&
 opi -n brave &&	
-sudo zypper install-y libreoffice-gtk3
+sudo zypper install -y libreoffice-gtk3
 tput setaf 166 bold; echo "✅ Instalace balíčků kompletní"
 tput setaf 166 bold; echo "✅ Osobní nastavení... (ctrl-C = STOP)"
 sleep 6
