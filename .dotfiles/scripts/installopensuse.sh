@@ -33,7 +33,6 @@ sudo cp -rf /home/libor/.dotfiles/other/to-etc/auto.master /etc/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/auto.nfs /etc/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd/sleep.conf.d /etc/systemd/
 sudo cp -rf /home/libor/.dotfiles/other/to-etc/grub.d/40_custom /etc/grub.d/
-sudo cp -rf /home/libor/.dotfiles/other/to-etc/systemd/system/getty@tty1.service.d/ /etc/systemd/system/ 
 gsettings set org.cinnamon.desktop.default-applications.terminal exec footclient
 sudo cp /home/libor/.dotfiles/fonts/cybermedium.flf /usr/share/figlet/
 
@@ -47,9 +46,10 @@ sudo systemctl enable autofs.service
 sudo systemctl enable cups.service
 sudo systemctl enable avahi-daemon.service
 sudo systemctl disable NetworkManager-wait-online.service
-sudo usermod-aG wheel libor
+sudo usermod -aG wheel libor
 mkdir Public Videa Stažené Temp Hudba Obrázky
 
+bash /home/libor/.dotfiles/scripts/clipse.sh
 echo -e "\n"
 tput setaf 166 bold; echo "✅ INSTALACE KOMPLETNÍ" 
 
