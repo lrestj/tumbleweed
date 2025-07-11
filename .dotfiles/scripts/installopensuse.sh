@@ -2,7 +2,7 @@
 
 ##### Tumbleweed Hyprland install #####
 
-Apps="autofs avahi baobab kf6-breeze-icons breeze6-cursors brightnessctl btop cliphist cmake cups eog evince fastfetch fd figlet firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator git gnome-disk-utility go google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends gvim hplip hyprland hypridle hyprlock hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jq Mesa-libGL1 libnotify-devel lxqt-policykit mako nemo nemo-extension-fileroller nemo-extensions-lang nemo-extension-terminal NetworkManager-applet nfs-client nwg-look opi pamixer pavucontrol pcmanfm-qt-lang power-profiles-daemon pipewire pipewire-jack libqt5-qtwayland qt6ct rofi simple-scan slurp swaybg swayidle swaylock symbols-only-nerd-fonts tmux udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-user-dirs xournalpp xwayland yazi"
+Apps="autofs avahi baobab kf6-breeze-icons breeze6-cursors brightnessctl btop cliphist cmake cups eog evince fastfetch fd figlet firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator git gnome-disk-utility go google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends gvim hplip hyprland hypridle hyprlock hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jetbrains-mono-fonts jq Mesa-libGL1 libnotify-devel lxqt-policykit mako nemo nemo-extension-fileroller nemo-extensions-lang nemo-extension-terminal NetworkManager-applet nfs-client nwg-look opi pamixer pavucontrol pcmanfm-qt-lang power-profiles-daemon pipewire pipewire-jack libqt5-qtwayland qt6ct rofi simple-scan slurp swaybg swayidle swaylock symbols-only-nerd-fonts tmux udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-user-dirs xournalpp xwayland yazi"
 
 
 tput setaf 166 bold; echo "✅ Instalace balíčků..."
@@ -49,6 +49,7 @@ sudo systemctl disable NetworkManager-wait-online.service
 sudo usermod -aG wheel libor
 sudo cp -r /home/libor/.dotfiles/other/to-etc/systemd/system/getty@tty1.service.d /etc/systemd/system/
 mkdir Public Videa Stažené Temp Hudba Obrázky
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 
 bash /home/libor/.dotfiles/scripts/clipse.sh
 echo -e "\n"
