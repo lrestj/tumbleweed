@@ -64,7 +64,7 @@
     "memory": {
         "format": "{}%    Internet + 💾",
         "on-click": "brave-browser",
-        "on-click-right": "pkill nemo || nemo",
+        "on-click-right": "pkill thunar || thunar",
         "on-click-middle": "pkill yazi || footclient -e yazi"
     },
 

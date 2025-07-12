@@ -2,13 +2,14 @@
 
 ##### Tumbleweed Hyprland install #####
 
-Apps="autofs avahi baobab kf6-breeze-icons breeze6-cursors brightnessctl btop cliphist cmake cups eog evince fastfetch fd figlet firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator git gnome-disk-utility go google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends gvim hplip hyprland hypridle hyprlock hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jetbrains-mono-fonts jq Mesa-libGL1 libtool libXt-devel libnotify-devel lxqt-policykit mako nemo nemo-extension-fileroller nemo-extensions-lang nemo-extension-terminal NetworkManager-applet nfs-client nwg-look opi pamixer pavucontrol pcmanfm-qt-lang power-profiles-daemon pipewire pipewire-jack libqt5-qtwayland qt6ct rofi simple-scan slurp swaybg swayidle swaylock symbols-only-nerd-fonts tmux udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-user-dirs xournalpp xwayland yazi"
+Apps="autofs avahi baobab kf6-breeze-icons breeze6-cursors brightnessctl btop cliphist cmake cups eog evince fastfetch fd figlet firewall-config firewall-applet fish file-roller font-manager fontawesome-fonts foot geany gnome-calculator git gnome-disk-utility go google-noto-coloremoji-fonts google-noto-fonts grim gthumb gvfs-backends gvim hplip hyprland hypridle hyprlock hyprland-qt-support hyprland-qtutils hyprwayland-scanner intel-media-driver jetbrains-mono-fonts jq Mesa-libGL1 libtool libXt-devel libnotify-devel lxqt-policykit mako NetworkManager-applet nfs-client nwg-look opi pamixer pavucontrol pcmanfm-qt-lang power-profiles-daemon pipewire pipewire-jack libqt5-qtwayland qt6ct rofi simple-scan slurp swaybg swayidle swaylock symbols-only-nerd-fonts tmux udiskie libva-utils waybar wireplumber wl-clipboard wireplumber wlogout wlsunset wofi xdg-desktop-portal-hyprland xdg-user-dirs xournalpp xwayland yazi"
 
 
 tput setaf 166 bold; echo "✅ Instalace balíčků..."
 sudo zypper install --no-recommends $Apps &&
 opi -n brave &&	
 sudo zypper install -y libreoffice-gtk3
+sudo zypper install -y thunar thunar-archive-plugin thunar-volman gvfs-fuse gvfs-backend-samba 
 tput setaf 166 bold; echo "✅ Instalace balíčků kompletní"
 tput setaf 166 bold; echo "✅ Osobní nastavení... (ctrl-C = STOP)"
 sleep 6
