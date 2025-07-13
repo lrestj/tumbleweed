@@ -49,7 +49,7 @@
         "tooltip": false,
         "on-click": "pkill simple-scan || simple-scan",
         "on-click-right": "pkill qalculate || qalculate",
-        "on-click-middle": "pkill btop || footclient -e btop"
+        "on-click-middle": "pkill btop || $TERM -e btop"
     },
 
     "temperature": {
@@ -58,14 +58,14 @@
         "format-icons": ["", "", ""],
         "on-click": "geany",
         "on-click-right": "libreoffice",
-        "on-click-middle": "footclient -e vim"
+        "on-click-middle": "$TERM -e vim"
     },
 
     "memory": {
         "format": "{}%    Internet + 💾",
         "on-click": "brave-browser",
         "on-click-right": "pkill thunar || thunar",
-        "on-click-middle": "pkill yazi || footclient -e yazi"
+        "on-click-middle": "pkill yazi || $TERM -e yazi"
     },
 
 
@@ -102,8 +102,8 @@
         // "device": "acpi_video1",
         "format": "  {percent}% {icon} ",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-click": "pkill footclient || kitty",
-        "on-click-right": "pkill btop || kitty -T btop -e btop"
+        "on-click": "pkill $TERM || $TERM",
+        "on-click-right": "pkill btop || $TERM -T btop -e btop"
     },
 
     "tray": {
