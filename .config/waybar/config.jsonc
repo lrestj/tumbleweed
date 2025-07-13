@@ -102,8 +102,8 @@
         // "device": "acpi_video1",
         "format": "  {percent}% {icon} ",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-click": "pkill footclient || footclient",
-        "on-click-right": "pkill btop || footclient -T btop -e btop"
+        "on-click": "pkill footclient || kitty",
+        "on-click-right": "pkill btop || kitty -T btop -e btop"
     },
 
     "tray": {
