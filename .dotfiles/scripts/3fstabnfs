@@ -1,7 +1,0 @@
-
-# Synology nfs shares
-192.168.77.18:/volume1/Rodinas   /data/nfs/Nas  nfs   users,auto,hard 0 0
-
-192.168.77.18:/volume1/Hudba   /data/nfs/HudbaNas  nfs  users,auto,hard   0 0
-
-192.168.77.18:/volume1/Filmy   /data/nfs/FilmyNas  nfs   users,auto,hard  0 0
