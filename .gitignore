@@ -69,11 +69,6 @@ Temp/
 .viminfo.tmp
 .viminfz.tmp
 Public/
-.config/libreoffice/4/user/config/javasettings_Linux_X86_64.xml
-.config/libreoffice/4/user/extensions/bundled/extensions.pmap
-.config/libreoffice/4/user/extensions/bundled/registry/com.sun.star.comp.deployment.bundle.PackageRegistryBackend/
-.config/libreoffice/4/user/extensions/bundled/registry/com.sun.star.comp.deployment.component.PackageRegistryBackend/
-.config/libreoffice/4/user/extensions/bundled/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/configmgr.ini
 .config/libreoffice/4/user/pack/config/javasettings_Linux_X86_64.pack
 .config/libreoffice/4/user/store/
 .wget-hsts
@@ -82,3 +77,6 @@ go/
 .config/clipse/clipse.log
 .local/bin/
 .local/src/
+.config/clipse/tmp_files/
+.config/mono.addins/
+.local/state/yazi/packages/
