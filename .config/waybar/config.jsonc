@@ -190,8 +190,8 @@
         "menu-actions": {
             "uspat": "systemctl suspend",
             "odhlásit": "hyprctl dispatch exit",
-            "vypnout": "poweroff",
-            "restart": "reboot"
+            "vypnout": "systemctl poweroff",
+            "restart": "systemctl reboot"
         }
     }
 }, 
