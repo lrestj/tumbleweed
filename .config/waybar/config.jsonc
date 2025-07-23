@@ -5,7 +5,7 @@
 [{
     //"layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 29, // Waybar height (to be removed for auto height)
     "margin-top": 1,
     "margin-left": 8,
     "margin-right": 8,
@@ -20,9 +20,11 @@
         "temperature",
         "memory",
         "custom/scan",
+        "custom/office",
         "custom/kalk",
         "custom/text",
         "custom/fm",
+        "custom/browser",
         "custom/media"
     ],
     "modules-center": [
@@ -42,45 +44,63 @@
     ],
 
     "custom/menu": {
-        "format": "  Menu  ",
-        "tooltip": false,
+        "format": "   Menu  ",
+        "tooltip-format": "Aplikace",
         "on-click": "pkill rofi || rofi -show drun -show-icons",
         "on-click-right": "wlogout"
     },
 
     "cpu": {
-        "format": "{usage}%",
+        "format": "  {usage}%",
         "tooltip": false,
-        "on-click": "pkill simple-scan || simple-scan",
-        "on-click-right": "pkill $kalk || $kalk",
-        "on-click-middle": "pkill btop || footclient -e btop"
+        "on-click": "",
+        "on-click-right": "",
+        "on-click-middle": ""
     },
 
     "temperature": {
         "thermal-zone": 0,
         "critical-threshold": 80,
-        "format": "  {temperatureC}°C Office  ",
-        "format-icons": ["", "", ""],
+        "format": " {icon} {temperatureC} °C  ",
+        "format-icons": ["", "", ""],
         "on-click": "libreoffice"
     },
-    "custom/scan": {
+
+    "memory": {
+        "format": "  {}% ",
+        "on-click": "brave",
+        "on-click-right": "pkill thunar || thunar",
+        "on-click-middle": "pkill yazi || footclient -e yazi"
+    },
+
+   "custom/scan": {
         //"format":"<U+F44E>",
         "format":"      ",
         "tooltip-format": "Skener",
         "on-click": "pkill simple-scan || simple-scan"
     },
+
+    "custom/office": {
+        //"format":"<U+F44E>",
+        "format":"      ",
+        "tooltip-format": "LibreOffice",
+        "on-click": "libreoffice"
+    },
+
     "custom/kalk": {
         //"format":"<U+F44E>",
         "format":"      ",
         "tooltip-format": "Kalkulačka",
         "on-click": "pkill $kalk || $kalk"
     },
+
     "custom/text": {
       //"format":"<U+F44E>",
         "format":"      ",
         "tooltip-format": "Textový editor",
         "on-click": "pkill geany || geany"
     },
+
    "custom/fm": {
         //"format":"<U+F44E>",
         "format":"      ",
@@ -88,14 +108,12 @@
         "on-click": "pkill thunar || thunar"
     },
 
-
-    "memory": {
-        "format": "{}%    Web ",
-        "on-click": "brave",
-        "on-click-right": "pkill thunar || thunar",
-        "on-click-middle": "pkill yazi || footclient -e yazi"
+   "custom/browser": {
+        //"format":"<U+F44E>",
+        "format":"      ",
+        "tooltip-format": "Internet",
+        "on-click": "brave"
     },
-
 
     "idle_inhibitor": {
         "format": "{icon}",
@@ -130,8 +148,8 @@
         // "device": "acpi_video1",
         "format": "  {percent}% {icon} ",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-click": "pkill footclient || footclient",
-        "on-click-right": "pkill btop || footclient -T btop -e btop"
+        "on-click-right": "pkill footclient || footclient",
+        "on-click": "pkill btop || footclient -T btop -e btop"
     },
 
     "tray": {
