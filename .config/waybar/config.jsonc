@@ -112,7 +112,7 @@
         //"format":"<U+F44E>",
         "format":"      ",
         "tooltip-format": "Internet",
-        "on-click": "brave"
+        "on-click": "brave-browser"
     },
 
     "idle_inhibitor": {
