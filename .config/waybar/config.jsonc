@@ -5,7 +5,7 @@
 [{
     //"layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 31, // Waybar height (to be removed for auto height)
+    "height": 30, // Waybar height (to be removed for auto height)
     "margin-top": 1,
     "margin-left": 8,
     "margin-right": 8,
@@ -19,6 +19,10 @@
         "cpu",
         "temperature",
         "memory",
+        "custom/scan",
+        "custom/kalk",
+        "custom/text",
+        "custom/fm",
         "custom/media"
     ],
     "modules-center": [
@@ -38,34 +42,58 @@
     ],
 
     "custom/menu": {
-        "format": "{}   Menu  ",
+        "format": "  Menu  ",
         "tooltip": false,
         "on-click": "pkill rofi || rofi -show drun -show-icons",
         "on-click-right": "wlogout"
     },
 
     "cpu": {
-        "format": "{usage}%   Skener + 🧮 ",
+        "format": "{usage}%",
         "tooltip": false,
         "on-click": "pkill simple-scan || simple-scan",
-        "on-click-right": "pkill qalculate || qalculate",
-        "on-click-middle": "pkill btop || $TERM -e btop"
+        "on-click-right": "pkill $kalk || $kalk",
+        "on-click-middle": "pkill btop || footclient -e btop"
     },
 
     "temperature": {
+        "thermal-zone": 0,
         "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon} 📝+Office",
-        "format-icons": ["", "", ""],
-        "on-click": "geany",
-        "on-click-right": "libreoffice",
-        "on-click-middle": "$TERM -e vim"
+        "format": "  {temperatureC}°C Office  ",
+        "format-icons": ["", "", ""],
+        "on-click": "libreoffice"
+    },
+    "custom/scan": {
+        //"format":"<U+F44E>",
+        "format":"      ",
+        "tooltip-format": "Skener",
+        "on-click": "pkill simple-scan || simple-scan"
+    },
+    "custom/kalk": {
+        //"format":"<U+F44E>",
+        "format":"      ",
+        "tooltip-format": "Kalkulačka",
+        "on-click": "pkill $kalk || $kalk"
+    },
+    "custom/text": {
+      //"format":"<U+F44E>",
+        "format":"      ",
+        "tooltip-format": "Textový editor",
+        "on-click": "pkill geany || geany"
+    },
+   "custom/fm": {
+        //"format":"<U+F44E>",
+        "format":"      ",
+        "tooltip-format": "Soubory",
+        "on-click": "pkill thunar || thunar"
     },
 
+
     "memory": {
-        "format": "{}%    Internet + 💾",
-        "on-click": "brave-browser",
+        "format": "{}%    Web ",
+        "on-click": "brave",
         "on-click-right": "pkill thunar || thunar",
-        "on-click-middle": "pkill yazi || $TERM -e yazi"
+        "on-click-middle": "pkill yazi || footclient -e yazi"
     },
 
 
@@ -102,8 +130,8 @@
         // "device": "acpi_video1",
         "format": "  {percent}% {icon} ",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-click": "pkill $TERM || $TERM",
-        "on-click-right": "pkill btop || $TERM -T btop -e btop"
+        "on-click": "pkill footclient || footclient",
+        "on-click-right": "pkill btop || footclient -T btop -e btop"
     },
 
     "tray": {
@@ -127,7 +155,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰁹",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -142,7 +170,7 @@
         "format-icons": {
             "default": "",
             "performance": "",
-            "balanced": "",
+            "balanced": " ",
             "power-saver": ""
         }
     },
@@ -155,15 +183,15 @@
     },
 
     "custom/power": {
-        "format" : "❎ ",
+        "format" : "⏻ ",
         "tooltip": false,
         "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        "menu-file": "~/.config/waybar/power_menu.xml",
         "menu-actions": {
-            "vypnout": "systemctl poweroff",
-            "restart": "systemctl reboot",
             "uspat": "systemctl suspend",
-            "odhlásit": "hyprctl dispatch exit"
+            "odhlásit": "hyprctl dispatch exit",
+            "vypnout": "poweroff",
+            "restart": "reboot"
         }
     }
 }, 
