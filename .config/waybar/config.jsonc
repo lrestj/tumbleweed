@@ -5,7 +5,7 @@
 [{
     //"layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
     "margin-top": 1,
     "margin-left": 8,
     "margin-right": 8,
@@ -82,7 +82,8 @@
     "custom/office": {
         "format":"       ",
         "tooltip-format": "LibreOffice",
-        "on-click": "libreoffice"
+        "on-click": "libreoffice",
+        "on-click-right": "libreoffice --writer"
     },
 
     "custom/kalk": {
@@ -187,7 +188,7 @@
         }
     },
     "hyprland/language": {
-        "format": "{}",
+        "format": " {} ",
         "min-length" : 4,
         "format-cs": "🇨🇿",
         "format-en": "🇺🇸",
@@ -195,8 +196,8 @@
     },
 
     "custom/power": {
-        "format" : " ",
-        "tooltip": false,
+        "format" : "  ",
+        "tooltip-format": "Vypnout...",
         "menu": "on-click",
         "menu-file": "~/.config/waybar/power_menu.xml",
         "menu-actions": {
@@ -222,7 +223,7 @@
     // Modules configuration
     "wlr/taskbar": {
         "format": "{icon}",
-        "icon-size": 26,
+        "icon-size": 30,
         "tooltip-format": "{title}",
         "on-click": "activate",
         "on-click-right": "close"
