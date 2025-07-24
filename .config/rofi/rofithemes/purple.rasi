@@ -38,7 +38,7 @@ window {
     height: 540px;
     width: 560px;
     background-color: @background;
-    border:           1;
+    border:           0;
     padding:          5;
 }
 mainbox {

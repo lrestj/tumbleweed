@@ -52,7 +52,6 @@
 
     "memory": {
         "format": "   {}% ",
-        "on-click": "",
         "on-click": "pkill rofi || rofi -show drun -show-icons",
         "on-click-right": "wlogout"
     },
