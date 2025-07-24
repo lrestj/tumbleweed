@@ -6,9 +6,9 @@
 }
 {
     "label" : "hibernate",
-    "action" : "dolphin",
-    "text" : "Správce souborů  [ d ]",
-    "keybind" : "d"
+    "action" : "thunar",
+    "text" : "Správce souborů  [ s ]",
+    "keybind" : "s"
 }
 {
     "label" : "suspend",
@@ -18,9 +18,9 @@
 }
 {
     "label" : "logout",
-    "action" : "kate",
-    "text" : "Textový editor  [ k ]",
-    "keybind" : "k"
+    "action" : "geany",
+    "text" : "Textový editor  [ t ]",
+    "keybind" : "t"
 }
 {
     "label" : "reboot",
