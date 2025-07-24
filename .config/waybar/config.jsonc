@@ -44,7 +44,7 @@
     ],
 
     "custom/menu": {
-        "format": "   Menu  ",
+        "format": "  Menu  ",
         "tooltip-format": "Aplikace",
         "on-click": "pkill rofi || rofi -show drun -show-icons",
         "on-click-right": "wlogout"
