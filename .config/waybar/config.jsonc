@@ -89,7 +89,7 @@
     "custom/kalk": {
         "format":"       ",
         "tooltip-format": "Kalkulačka",
-        "on-click": "pkill $kalk || $kalk"
+        "on-click": "gnome-calculator"
     },
 
     "custom/text": {
