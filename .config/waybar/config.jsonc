@@ -5,7 +5,7 @@
 [{
     //"layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
+    "height": 34, // Waybar height (to be removed for auto height)
     "margin-top": 1,
     "margin-left": 8,
     "margin-right": 8,
@@ -14,8 +14,8 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "memory",
         // "custom/menu",
+        "memory",
         "hyprland/submap",
         "cpu",
         "temperature",
@@ -44,7 +44,7 @@
     ],
 
     "custom/menu": {
-        "format": "  Menu  ",
+        "format": "   Menu  ",
         "tooltip-format": "Aplikace",
         "on-click": "pkill rofi || rofi -show drun -show-icons",
         "on-click-right": "wlogout"
@@ -59,7 +59,7 @@
     "cpu": {
         "format": "  {usage}%",
         "tooltip": false,
-        "on-click": "",
+        "on-click": "footclient",
         "on-click-right": "",
         "on-click-middle": ""
     },
@@ -69,7 +69,8 @@
         "critical-threshold": 80,
         "format": " {icon} {temperatureC} °C  ",
         "format-icons": ["", "", ""],
-        "on-click": ""
+        "on-click": "pkill btop || footclient -T btop -e btop",
+        "on-click-right": ""
     },
 
    "custom/scan": {
@@ -79,20 +80,20 @@
     },
 
     "custom/office": {
-        "format":"       ",
+        "format":"     ",
         "tooltip-format": "LibreOffice",
         "on-click": "libreoffice",
         "on-click-right": "libreoffice --writer"
     },
 
     "custom/kalk": {
-        "format":"       ",
+        "format":"        ",
         "tooltip-format": "Kalkulačka",
-        "on-click": "gnome-calculator"
+        "on-click": "pkill $kalk || $kalk"
     },
 
     "custom/text": {
-        "format":"       ",
+        "format":"     ",
         "tooltip-format": "Textový editor",
         "on-click": "pkill geany || geany"
     },
@@ -104,7 +105,7 @@
     },
 
    "custom/browser": {
-        "format":"       ",
+        "format":"      ",
         "tooltip-format": "Internet",
         "on-click": "brave"
     },
